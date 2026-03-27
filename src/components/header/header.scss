@@ -1,0 +1,173 @@
+.header {
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 32px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .logo-icon {
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-text {
+      font-size: 24px;
+    }
+
+    .logo-light {
+      font-weight: 300;
+      color: #6b7280;
+    }
+
+    .logo-bold {
+      font-weight: 700;
+      color: #111827;
+    }
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .icon {
+      cursor: pointer;
+      font-size: 20px;
+      color: #6b7280;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        color: #111827;
+      }
+    }
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: url("/brainFix.jpg") center/cover no-repeat;
+    }
+
+    .name {
+      font-size: 16px;
+      font-weight: 500;
+      color: #111827;
+    }
+  }
+
+  // Адаптация для планшетов
+  @media (max-width: 1024px) {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .logo {
+      .logo-icon {
+        font-size: 20px;
+      }
+
+      .logo-text {
+        font-size: 20px;
+      }
+    }
+
+    .icons .icon {
+      font-size: 18px;
+    }
+
+    .user .name {
+      font-size: 14px;
+    }
+  }
+
+  // Адаптация для мобильных устройств
+  @media (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .logo {
+      .logo-icon {
+        font-size: 18px;
+      }
+
+      .logo-text {
+        font-size: 18px;
+      }
+    }
+
+    .header-right {
+      gap: 12px;
+    }
+
+    .icons {
+      gap: 8px;
+
+      .icon {
+        font-size: 16px;
+      }
+    }
+
+    .user {
+      gap: 6px;
+
+      .avatar {
+        width: 28px;
+        height: 28px;
+      }
+
+      .name {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .header-right {
+      gap: 10px;
+    }
+
+    .icons {
+      display: none;
+    }
+
+    .user {
+      .avatar {
+        width: 26px;
+        height: 26px;
+      }
+
+      .name {
+        display: none;
+      }
+    }
+  }
+}
